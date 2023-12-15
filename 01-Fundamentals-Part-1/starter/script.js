@@ -215,7 +215,7 @@
 // const averageAgeParenthesis = (ageClifton + agejohn) / 2;
 // console.log(ageClifton, agejohn, averageAgeParenthesis);
 
-/*CHALLENGE #1
+/* ------- CODING CHALLENGE #1 -------//
 Mark and John are trying to compare their BMI (Body Mass Index),
 which is calculated using the formula: 
 
@@ -277,8 +277,7 @@ John weighs 92 kg and is 1.95 m tall.
 // console.log(cliffTemplateLiteral);
 
 //------- If/ Else Statements -------//
-
-const age = 20
+/** Const age = 20
 const isOldEnough = age >= 18;
 
 if(isOldEnough) {
@@ -297,4 +296,80 @@ century = 20
 else {
     century =21
 }
-console.log(century)
+console.log(century)*/
+
+
+// ------- CODING CHALLENGE #2 -------//
+
+/**
+* Use the BMI example from Challenge #1, and the code you already wrote, 
+* and improve it:
+
+1. Print a nice output to the console, 
+telling the user who has the higher BMI. The message can be either:
+
+"Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!".
+
+2. Modify the outputs above to use template literals to include 
+the BMI values in the outputs.
+
+Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or
+"John's BMI (29.1) is higher than Mark's (27)!".
+
+Note: Don't round the BMI values. Leave them as they are.
+*/
+// let massMark = 95;
+// const heightMark = 1.88;
+// let massJohn = 85;
+// const heightJohn = 1.76;
+
+// const BMIMark = massMark / (heightMark * heightMark);
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+// if(BMIMark > BMIJohn){
+//     console.log(`Marks's BMI ${BMIMark} is higher than John's ${BMIJohn}`);
+// }
+//     else {
+//     console.log(`John's BMI ${BMIJohn} is higher than Mark's ${BMIMark} `);
+//     }
+
+// ------- TYPE COERCION --------//
+// Using "Number() and String() for "Type Conversion"
+// Using MAth operators in association with string for "Type Coercion" 
+/**When mixing strings and numbers using the "+" symbol will reult in 
+  * concatentation of the strings its adding 
+  * When using the other math operators "-", " /", "*" they will do math and behave normally
+  * To avoid unintended results use conversion like "Number" on strings to 
+  * convert the strings to numbers beforehand
+  */
+
+//----- Type Conversion -----//
+const inputYear = '1991';
+console.log(inputYear + 18); // returns 199118 because the plus concatenated it
+
+const inputYearConvert = '1991'
+console.log(Number(inputYearConvert), inputYear) // returns a 1991 as a number then '1991' as a string
+console.log(Number(inputYear) + 18) // returns 2009 after adding the 1991 with 8
+
+/**
+ * JavaScript cant convert everything to a number though, 
+ * and
+ * when it cant it will return NaN or "Not a Number" 
+ */
+
+console.log(Number('Jonas')); // returns NaN because jonas cant be convert to a number unlike actual numbers in strings can
+ // this will return number but NaN refers to invalid numbers specifically which arent numbers but are still in the numnber category
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// ----- Type Coercion -----//
+// Type Coercion will assume whether to use a string or number behind the scenes 
+// based on whether it is using a + or a -, /, and *
+console.log('I am ' + 23 + ' years old'); // This turns 23 into a sttring becuase its concatenated
+console.log('23' - '10' - 3); // This does normal math becuase its using a minus on 23- 10 first to get 13 then subtracts 3 for 10
+console.log('23' / '2'); // This returns 11.5 because it does normal math on the numbers
+
+let n = '1' + 1 // This will return 11 as a string because it will concatenate
+n = n - 1 // This will return 10 because it will subtract 1 from 11 
+console.log(n); // This returns 10 as a number because the string 11 had 1 subtracted from it
