@@ -258,20 +258,43 @@ John weighs 92 kg and is 1.95 m tall.
  * literals you would have to concatenate 
  * using '+'
  */
-const firstName = "cliff"
-const job = "Programmer"
-const thisYear = 2023;
+// const firstName = "cliff"
+// const job = "Programmer"
+// const thisYear = 2023;
+// const birthYear = 1998;
+// const cliffNew = "I'm " + firstName + " , a " + (thisYear - birthYear) + " year old " +
+// job;
+
+// console.log(cliffNew);
+
+// /**When doing string while using template literals you use the `` backslashes by the tilda symbol
+//  * And use "${}" the insert your varibles directly into the strings
+//  * Making it much easier to create strings than constantly trying to mange the
+//  * plus symbols and the quotations
+//  */
+
+// const cliffTemplateLiteral =  `I'm ${firstName}, a ${thisYear - birthYear} year old ${job}`
+// console.log(cliffTemplateLiteral);
+
+//------- If/ Else Statements -------//
+
+const age = 20
+const isOldEnough = age >= 18;
+
+if(isOldEnough) {
+    console.log('Sarah can start driving license');
+}
+else{
+    console.log('Sarah cannot start driving yet');
+}
+
 const birthYear = 1998;
-const cliffNew = "I'm " + firstName + " , a " + (thisYear - birthYear) + " year old " +
-job;
+let century;
 
-console.log(cliffNew);
-
-/**When doing string while using template literals you use the `` backslashes by the tilda symbol
- * And use "${}" the insert your varibles directly into the strings
- * Making it much easier to create strings than constantly trying to mange the
- * plus symbols and the quotations
- */
-
-const cliffTemplateLiteral =  `I'm ${firstName}, a ${thisYear - birthYear} year old ${job}`
-console.log(cliffTemplateLiteral);
+if(birthYear<=2000){
+century = 20
+}
+else {
+    century =21
+}
+console.log(century)
