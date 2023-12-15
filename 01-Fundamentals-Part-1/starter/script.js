@@ -96,7 +96,7 @@
 // normal variable but instead its a "property on a
 // global object".*/
 
-//---------Working With Operators---------//
+//--------Working With Operators--------//
 
 //-----Math Operators-----//
 //Using Minus Symbol//
