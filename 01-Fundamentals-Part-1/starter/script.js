@@ -188,32 +188,32 @@
 // /*returns true because (currentYear - ageCliff) 25
 // is less than (currentYear - 24) 26*/
 
-// //------Operator Precendence-------//
+// //------Operxator Precendence-------//
 
-const thisYear = 2023;
-const ageClifton = thisYear - 1998; // 25
-const agejohn = thisYear - 2012; // 11
+// const thisYear = 2023;
+// const ageClifton = thisYear - 1998; // 25
+// const agejohn = thisYear - 2012; // 11
 
-/*This code deals with the math operators before 
-the Comparison Operators to correctly do order 
-of operations */
-console.log(thisYear - 1991 > thisYear - 2018);
+// /*This code deals with the math operators before 
+// the Comparison Operators to correctly do order 
+// of operations */
+// console.log(thisYear - 1991 > thisYear - 2018);
 
-/* Using Parenthesis has the highest level of precendence 
-when using operators similar to math*/
-let x, y;
-x = y = 25 - 10 - 5;
-console.log(x, y);
+// /* Using Parenthesis has the highest level of precendence 
+// when using operators similar to math*/
+// let x, y;
+// x = y = 25 - 10 - 5;
+// console.log(x, y);
 
-/*This will make 'averageAge' = 30.5 because it will do 
-multiplcation/division before addition/subtraction operations*/
-const averageAge = ageClifton + agejohn / 2;
-console.log(ageClifton, agejohn, averageAge);
+// /*This will make 'averageAge' = 30.5 because it will do 
+// multiplcation/division before addition/subtraction operations*/
+// const averageAge = ageClifton + agejohn / 2;
+// console.log(ageClifton, agejohn, averageAge);
 
-/*This will make 'averageAge' = 18 because it will do 
-addition/subtraction operations in the parenthesis before the division*/
-const averageAgeParenthesis = (ageClifton + agejohn) / 2;
-console.log(ageClifton, agejohn, averageAgeParenthesis);
+// /*This will make 'averageAge' = 18 because it will do 
+// addition/subtraction operations in the parenthesis before the division*/
+// const averageAgeParenthesis = (ageClifton + agejohn) / 2;
+// console.log(ageClifton, agejohn, averageAgeParenthesis);
 
 /*CHALLENGE #1
 Mark and John are trying to compare their BMI (Body Mass Index),
@@ -239,14 +239,39 @@ TEST DATA: Marks weighs 78 kg and is 1.69 m tall.
 John weighs 92 kg and is 1.95 m tall.
 */
 
-let massMark = 78;
-const heightMark = 1.69;
-let massJohn = 92;
-const heightJohn = 1.95;
+// let massMark = 78;
+// const heightMark = 1.69;
+// let massJohn = 92;
+// const heightJohn = 1.95;
 
-const BMIMark = massMark / (heightMark * heightMark);
-const BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log(BMIMark, BMIJohn);
+// const BMIMark = massMark / (heightMark * heightMark);
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+// console.log(BMIMark, BMIJohn);
 
-const markHigherBMI = BMIMark > BMIJohn;
-console.log(markHigherBMI);
+// const markHigherBMI = BMIMark > BMIJohn;
+// console.log(markHigherBMI);
+
+
+//----- Template Literals & Strings-----//
+
+/**When Doing string without using 
+ * literals you would have to concatenate 
+ * using '+'
+ */
+const firstName = "cliff"
+const job = "Programmer"
+const thisYear = 2023;
+const birthYear = 1998;
+const cliffNew = "I'm " + firstName + " , a " + (thisYear - birthYear) + " year old " +
+job;
+
+console.log(cliffNew);
+
+/**When doing string while using template literals you use the `` backslashes by the tilda symbol
+ * And use "${}" the insert your varibles directly into the strings
+ * Making it much easier to create strings than constantly trying to mange the
+ * plus symbols and the quotations
+ */
+
+const cliffTemplateLiteral =  `I'm ${firstName}, a ${thisYear - birthYear} year old ${job}`
+console.log(cliffTemplateLiteral);
