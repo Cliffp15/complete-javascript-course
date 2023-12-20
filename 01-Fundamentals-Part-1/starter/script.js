@@ -194,23 +194,23 @@
 // const ageClifton = thisYear - 1998; // 25
 // const agejohn = thisYear - 2012; // 11
 
-// /*This code deals with the math operators before 
-// the Comparison Operators to correctly do order 
+// /*This code deals with the math operators before
+// the Comparison Operators to correctly do order
 // of operations */
 // console.log(thisYear - 1991 > thisYear - 2018);
 
-// /* Using Parenthesis has the highest level of precendence 
+// /* Using Parenthesis has the highest level of precendence
 // when using operators similar to math*/
 // let x, y;
 // x = y = 25 - 10 - 5;
 // console.log(x, y);
 
-// /*This will make 'averageAge' = 30.5 because it will do 
+// /*This will make 'averageAge' = 30.5 because it will do
 // multiplcation/division before addition/subtraction operations*/
 // const averageAge = ageClifton + agejohn / 2;
 // console.log(ageClifton, agejohn, averageAge);
 
-// /*This will make 'averageAge' = 18 because it will do 
+// /*This will make 'averageAge' = 18 because it will do
 // addition/subtraction operations in the parenthesis before the division*/
 // const averageAgeParenthesis = (ageClifton + agejohn) / 2;
 // console.log(ageClifton, agejohn, averageAgeParenthesis);
@@ -251,11 +251,10 @@ John weighs 92 kg and is 1.95 m tall.
 // const markHigherBMI = BMIMark > BMIJohn;
 // console.log(markHigherBMI);
 
-
 //----- Template Literals & Strings-----//
 
-/**When Doing string without using 
- * literals you would have to concatenate 
+/**When Doing string without using
+ * literals you would have to concatenate
  * using '+'
  */
 // const firstName = "cliff"
@@ -298,7 +297,6 @@ else {
 }
 console.log(century)*/
 
-
 // ------- CODING CHALLENGE #2 -------//
 
 /**
@@ -335,13 +333,13 @@ Note: Don't round the BMI values. Leave them as they are.
 
 // ------- TYPE COERCION --------//
 // Using "Number() and String() for "Type Conversion"
-// Using MAth operators in association with string for "Type Coercion" 
-/**When mixing strings and numbers using the "+" symbol will reult in 
-  * concatentation of the strings its adding 
-  * When using the other math operators "-", " /", "*" they will do math and behave normally
-  * To avoid unintended results use conversion like "Number" on strings to 
-  * convert the strings to numbers beforehand
-  */
+// Using MAth operators in association with string for "Type Coercion"
+/**When mixing strings and numbers using the "+" symbol will reult in
+ * concatentation of the strings its adding
+ * When using the other math operators "-", " /", "*" they will do math and behave normally
+ * To avoid unintended results use conversion like "Number" on strings to
+ * convert the strings to numbers beforehand
+ */
 
 //----- Type Conversion -----//
 // const inputYear = '1991';
@@ -352,9 +350,9 @@ Note: Don't round the BMI values. Leave them as they are.
 // console.log(Number(inputYear) + 18) // returns 2009 after adding the 1991 with 8
 
 // /**
-//  * JavaScript cant convert everything to a number though, 
+//  * JavaScript cant convert everything to a number though,
 //  * and
-//  * when it cant it will return NaN or "Not a Number" 
+//  * when it cant it will return NaN or "Not a Number"
 //  */
 
 // console.log(Number('Jonas')); // returns NaN because jonas cant be convert to a number unlike actual numbers in strings can
@@ -364,14 +362,14 @@ Note: Don't round the BMI values. Leave them as they are.
 // console.log(String(23), 23);
 
 // ----- Type Coercion -----//
-// Type Coercion will assume whether to use a string or number behind the scenes 
+// Type Coercion will assume whether to use a string or number behind the scenes
 // based on whether it is using a + or a -, /, and *
 // console.log('I am ' + 23 + ' years old'); // This turns 23 into a sttring becuase its concatenated
 // console.log('23' - '10' - 3); // This does normal math becuase its using a minus on 23- 10 first to get 13 then subtracts 3 for 10
 // console.log('23' / '2'); // This returns 11.5 because it does normal math on the numbers
 
 // let n = '1' + 1 // This will return 11 as a string because it will concatenate
-// n = n - 1 // This will return 10 because it will subtract 1 from 11 
+// n = n - 1 // This will return 10 because it will subtract 1 from 11
 // console.log(n); // This returns 10 as a number because the string 11 had 1 subtracted from it
 
 // ------- Truthy and Falsy Values -------//
@@ -379,10 +377,34 @@ Note: Don't round the BMI values. Leave them as they are.
 //Values that become True or False when we try to convert them into "Booleans"
 // There are only five Falsy values : 0, '' (empty strings) , undefined , null, NaN
 
-console.log(Boolean(0)) // Returns false because 0 is a falsy number
-console.log(Boolean(undefined)) // returns false because undefined cannot be true
-console.log(Boolean("jonas")) // returns true because "jonas" is a string that contains a value 
-console.log(Boolean({})) // returns true because this is an empty object
-console.log(Boolean('')) // returns true because this is an empty string
+console.log(Boolean(0)); // Returns false because 0 is a falsy number
+console.log(Boolean(undefined)); // returns false because undefined cannot be true
+console.log(Boolean("jonas")); // returns true because "jonas" is a string that contains a value
+console.log(Boolean({})); // returns true because this is an empty object
+console.log(Boolean("")); // returns true because this is an empty string
 // console.log(Boolean(Nan))
 
+//Example of Falsy values returning Booleans
+let money = 0;
+//This will default to the false selection "You should get a job" because 0 is a falsy value so the false option was selected"
+if (money) {
+  console.log("Dont spend all your money");
+} else {
+  console.log("You should get a job");
+}
+//This will default to the true selection "Dont spend all your money" because 100 is not a falsy value so the true option was selected"
+money = 100;
+if (money) {
+  console.log("Dont spend all your money");
+} else {
+  console.log("You should get a job");
+}
+
+//While undefined means there is no value assigned this output will still default to the Undefined option because the falsy value 0 was used as the heights value
+let height = 0;
+
+if (height) {
+  console.log("YAY! Height is defined");
+} else {
+  console.log("No! Height is UNDEFINED");
+}
