@@ -344,32 +344,45 @@ Note: Don't round the BMI values. Leave them as they are.
   */
 
 //----- Type Conversion -----//
-const inputYear = '1991';
-console.log(inputYear + 18); // returns 199118 because the plus concatenated it
+// const inputYear = '1991';
+// console.log(inputYear + 18); // returns 199118 because the plus concatenated it
 
-const inputYearConvert = '1991'
-console.log(Number(inputYearConvert), inputYear) // returns a 1991 as a number then '1991' as a string
-console.log(Number(inputYear) + 18) // returns 2009 after adding the 1991 with 8
+// const inputYearConvert = '1991'
+// console.log(Number(inputYearConvert), inputYear) // returns a 1991 as a number then '1991' as a string
+// console.log(Number(inputYear) + 18) // returns 2009 after adding the 1991 with 8
 
-/**
- * JavaScript cant convert everything to a number though, 
- * and
- * when it cant it will return NaN or "Not a Number" 
- */
+// /**
+//  * JavaScript cant convert everything to a number though, 
+//  * and
+//  * when it cant it will return NaN or "Not a Number" 
+//  */
 
-console.log(Number('Jonas')); // returns NaN because jonas cant be convert to a number unlike actual numbers in strings can
- // this will return number but NaN refers to invalid numbers specifically which arent numbers but are still in the numnber category
-console.log(typeof NaN);
+// console.log(Number('Jonas')); // returns NaN because jonas cant be convert to a number unlike actual numbers in strings can
+//  // this will return number but NaN refers to invalid numbers specifically which arent numbers but are still in the numnber category
+// console.log(typeof NaN);
 
-console.log(String(23), 23);
+// console.log(String(23), 23);
 
 // ----- Type Coercion -----//
 // Type Coercion will assume whether to use a string or number behind the scenes 
 // based on whether it is using a + or a -, /, and *
-console.log('I am ' + 23 + ' years old'); // This turns 23 into a sttring becuase its concatenated
-console.log('23' - '10' - 3); // This does normal math becuase its using a minus on 23- 10 first to get 13 then subtracts 3 for 10
-console.log('23' / '2'); // This returns 11.5 because it does normal math on the numbers
+// console.log('I am ' + 23 + ' years old'); // This turns 23 into a sttring becuase its concatenated
+// console.log('23' - '10' - 3); // This does normal math becuase its using a minus on 23- 10 first to get 13 then subtracts 3 for 10
+// console.log('23' / '2'); // This returns 11.5 because it does normal math on the numbers
 
-let n = '1' + 1 // This will return 11 as a string because it will concatenate
-n = n - 1 // This will return 10 because it will subtract 1 from 11 
-console.log(n); // This returns 10 as a number because the string 11 had 1 subtracted from it
+// let n = '1' + 1 // This will return 11 as a string because it will concatenate
+// n = n - 1 // This will return 10 because it will subtract 1 from 11 
+// console.log(n); // This returns 10 as a number because the string 11 had 1 subtracted from it
+
+// ------- Truthy and Falsy Values -------//
+
+//Values that become True or False when we try to convert them into "Booleans"
+// There are only five Falsy values : 0, '' (empty strings) , undefined , null, NaN
+
+console.log(Boolean(0)) // Returns false because 0 is a falsy number
+console.log(Boolean(undefined)) // returns false because undefined cannot be true
+console.log(Boolean("jonas")) // returns true because "jonas" is a string that contains a value 
+console.log(Boolean({})) // returns true because this is an empty object
+console.log(Boolean('')) // returns true because this is an empty string
+// console.log(Boolean(Nan))
+
