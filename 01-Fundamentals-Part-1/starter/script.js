@@ -408,3 +408,70 @@ if (height) {
 } else {
   console.log("No! Height is UNDEFINED");
 }
+
+// ------- Equality Operators -------//
+
+//  equality operators "===" returns booleans true or false
+// and DOES NOT do type conversion so it will not change it for you
+// Not the same as the assignment equal symbol "=" or
+// the loose equality symbol which is double equal "=="
+//which DOES DO type conversion.
+//This means the double equal could convert a string to a number to produce a true output
+
+let age = 18;
+
+if (age === 18) {
+  console.log("You are an adult");
+} else {
+  console.log("you are not an adult yet");
+}
+
+let ageLoose = "18";
+
+if (ageLoose == 18) {
+  console.log("You are an loose adult");
+} else {
+  console.log("you are not an adult yet");
+}
+
+//An easy way to get value from any webpage using
+// "prompt()"For Ex: prompt("Whats your favourite number");
+
+//You cold store the value by assigning the prompt to a variable
+const favorite = prompt("Whats your favorite number");
+console.log(favorite);
+console.log(typeof favorite);
+
+//Using the triple equal will always return false here because it wont convert the string into a number so it will never be equal to one another even if your type 20
+if (favorite === 20) {
+  console.log("Your favorite number is small");
+} else {
+  console.log("your favorite number is big");
+} // This will always return "Your number is big"
+
+//Therefore you could use Number Conversion on the prompt togenerate the number output to make it equal
+const favoriteConvert = Number(prompt("Whats your favorite number"));
+console.log(favoriteConvert);
+console.log(typeof favoriteConvert);
+
+if (favoriteConvert === 20) {
+  console.log("Your favorite number is small");
+} else if (favoriteConvert === 7) {
+  console.log("Thats also a big number");
+} else {
+  console.log("your favorite number is big");
+} //This will return "Your favorite number is small" if the user types in 20 now
+
+//Could also use "!" which means "does not"
+// so saying favorite != 20 means "if favorite does not equal 20 then" do the stuff in the code block
+const notFavoriteConvert = Number(prompt("Whats your favorite number"));
+
+console.log(notFavoriteConvert);
+
+console.log(typeof notFavoriteConvert);
+if (notFavoriteConvert != 20) {
+  console.log("Your favorite number isn't 20");
+} else {
+  console.log("Your number is 20");
+}
+//returns true output if the value is not 20
