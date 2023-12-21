@@ -377,103 +377,103 @@ Note: Don't round the BMI values. Leave them as they are.
 //Values that become True or False when we try to convert them into "Booleans"
 // There are only five Falsy values : 0, '' (empty strings) , undefined , null, NaN
 
-console.log(Boolean(0)); // Returns false because 0 is a falsy number
-console.log(Boolean(undefined)); // returns false because undefined cannot be true
-console.log(Boolean("jonas")); // returns true because "jonas" is a string that contains a value
-console.log(Boolean({})); // returns true because this is an empty object
-console.log(Boolean("")); // returns true because this is an empty string
-// console.log(Boolean(Nan))
+// console.log(Boolean(0)); // Returns false because 0 is a falsy number
+// console.log(Boolean(undefined)); // returns false because undefined cannot be true
+// console.log(Boolean("jonas")); // returns true because "jonas" is a string that contains a value
+// console.log(Boolean({})); // returns true because this is an empty object
+// console.log(Boolean("")); // returns true because this is an empty string
+// // console.log(Boolean(Nan))
 
-//Example of Falsy values returning Booleans
-let money = 0;
-//This will default to the false selection "You should get a job" because 0 is a falsy value so the false option was selected"
-if (money) {
-  console.log("Dont spend all your money");
-} else {
-  console.log("You should get a job");
-}
-//This will default to the true selection "Dont spend all your money" because 100 is not a falsy value so the true option was selected"
-money = 100;
-if (money) {
-  console.log("Dont spend all your money");
-} else {
-  console.log("You should get a job");
-}
+// //Example of Falsy values returning Booleans
+// let money = 0;
+// //This will default to the false selection "You should get a job" because 0 is a falsy value so the false option was selected"
+// if (money) {
+//   console.log("Dont spend all your money");
+// } else {
+//   console.log("You should get a job");
+// }
+// //This will default to the true selection "Dont spend all your money" because 100 is not a falsy value so the true option was selected"
+// money = 100;
+// if (money) {
+//   console.log("Dont spend all your money");
+// } else {
+//   console.log("You should get a job");
+// }
 
-//While undefined means there is no value assigned this output will still default to the Undefined option because the falsy value 0 was used as the heights value
-let height = 0;
+// //While undefined means there is no value assigned this output will still default to the Undefined option because the falsy value 0 was used as the heights value
+// let height = 0;
 
-if (height) {
-  console.log("YAY! Height is defined");
-} else {
-  console.log("No! Height is UNDEFINED");
-}
+// if (height) {
+//   console.log("YAY! Height is defined");
+// } else {
+//   console.log("No! Height is UNDEFINED");
+// }
 
-// ------- Equality Operators -------//
+// // ------- Equality Operators -------//
 
-//  equality operators "===" returns booleans true or false
-// and DOES NOT do type conversion so it will not change it for you
-// Not the same as the assignment equal symbol "=" or
-// the loose equality symbol which is double equal "=="
-//which DOES DO type conversion.
-//This means the double equal could convert a string to a number to produce a true output
+// //  equality operators "===" returns booleans true or false
+// // and DOES NOT do type conversion so it will not change it for you
+// // Not the same as the assignment equal symbol "=" or
+// // the loose equality symbol which is double equal "=="
+// //which DOES DO type conversion.
+// //This means the double equal could convert a string to a number to produce a true output
 
-let age = 18;
+// let age = 18;
 
-if (age === 18) {
-  console.log("You are an adult");
-} else {
-  console.log("you are not an adult yet");
-}
+// if (age === 18) {
+//   console.log("You are an adult");
+// } else {
+//   console.log("you are not an adult yet");
+// }
 
-let ageLoose = "18";
+// let ageLoose = "18";
 
-if (ageLoose == 18) {
-  console.log("You are an loose adult");
-} else {
-  console.log("you are not an adult yet");
-}
+// if (ageLoose == 18) {
+//   console.log("You are an loose adult");
+// } else {
+//   console.log("you are not an adult yet");
+// }
 
-//An easy way to get value from any webpage using
-// "prompt()"For Ex: prompt("Whats your favourite number");
+// //An easy way to get value from any webpage using
+// // "prompt()"For Ex: prompt("Whats your favourite number");
 
-//You cold store the value by assigning the prompt to a variable
-const favorite = prompt("Whats your favorite number");
-console.log(favorite);
-console.log(typeof favorite);
+// //You cold store the value by assigning the prompt to a variable
+// const favorite = prompt("Whats your favorite number");
+// console.log(favorite);
+// console.log(typeof favorite);
 
-//Using the triple equal will always return false here because it wont convert the string into a number so it will never be equal to one another even if your type 20
-if (favorite === 20) {
-  console.log("Your favorite number is small");
-} else {
-  console.log("your favorite number is big");
-} // This will always return "Your number is big"
+// //Using the triple equal will always return false here because it wont convert the string into a number so it will never be equal to one another even if your type 20
+// if (favorite === 20) {
+//   console.log("Your favorite number is small");
+// } else {
+//   console.log("your favorite number is big");
+// } // This will always return "Your number is big"
 
-//Therefore you could use Number Conversion on the prompt togenerate the number output to make it equal
-const favoriteConvert = Number(prompt("Whats your favorite number"));
-console.log(favoriteConvert);
-console.log(typeof favoriteConvert);
+// //Therefore you could use Number Conversion on the prompt togenerate the number output to make it equal
+// const favoriteConvert = Number(prompt("Whats your favorite number"));
+// console.log(favoriteConvert);
+// console.log(typeof favoriteConvert);
 
-if (favoriteConvert === 20) {
-  console.log("Your favorite number is small");
-} else if (favoriteConvert === 7) {
-  console.log("Thats also a big number");
-} else {
-  console.log("your favorite number is big");
-} //This will return "Your favorite number is small" if the user types in 20 now
+// if (favoriteConvert === 20) {
+//   console.log("Your favorite number is small");
+// } else if (favoriteConvert === 7) {
+//   console.log("Thats also a big number");
+// } else {
+//   console.log("your favorite number is big");
+// } //This will return "Your favorite number is small" if the user types in 20 now
 
-//Could also use "!" which means "does not"
-// so saying favorite != 20 means "if favorite does not equal 20 then" do the stuff in the code block
-const notFavoriteConvert = Number(prompt("Whats your favorite number"));
+// //Could also use "!" which means "does not"
+// // so saying favorite != 20 means "if favorite does not equal 20 then" do the stuff in the code block
+// const notFavoriteConvert = Number(prompt("Whats your favorite number"));
 
-console.log(notFavoriteConvert);
+// console.log(notFavoriteConvert);
 
-console.log(typeof notFavoriteConvert);
-if (notFavoriteConvert != 20) {
-  console.log("Your favorite number isn't 20");
-} else {
-  console.log("Your number is 20");
-}
+// console.log(typeof notFavoriteConvert);
+// if (notFavoriteConvert != 20) {
+//   console.log("Your favorite number isn't 20");
+// } else {
+//   console.log("Your number is 20");
+// }
 //returns true output if the value is not 20
 
 // -------- CODING CHALLENGE #3 ------- //
@@ -497,24 +497,43 @@ TEST DATA: Dolphins scored 96, 108, and 89. Koalas scored 88, 91, and 110.
  *
  */
 
-const rounds = 3;
+// const rounds = 3;
 
-const dolR1 = 96;
-const dolR2 = 108;
-const dolR3 = 89;
+// const dolR1 = 96;
+// const dolR2 = 108;
+// const dolR3 = 89;
 
-const koaR1 = 88;
-const koaR2 = 91;
-const koaR3 = 110;
+// const koaR1 = 88;
+// const koaR2 = 91;
+// const koaR3 = 110;
 
-const dolAverage = (dolR1 + dolR2 + dolR3) / rounds;
-const koaAverage = (koaR1 + koaR2 + koaR3) / rounds;
-console.log(dolAverage, koaAverage);
+// const dolAverage = (dolR1 + dolR2 + dolR3) / rounds;
+// const koaAverage = (koaR1 + koaR2 + koaR3) / rounds;
+// console.log(dolAverage, koaAverage);
 
-if (koaAverage > dolAverage) {
-  console.log("Koalas win trophy ");
-} else if (dolAverage > koaAverage) {
-  console.log("Dolphins win trophy");
-} else if (koaAverage === dolAverage) {
-  console.log("Both win trophy");
+// if (koaAverage > dolAverage) {
+//   console.log("Koalas win trophy ");
+// } else if (dolAverage > koaAverage) {
+//   console.log("Dolphins win trophy");
+// } else if (koaAverage === dolAverage) {
+//   console.log("Both win trophy");
+// }
+
+// ------- Switch Statement -------//
+
+//Used to compare a variable to multiple outcome and select the outcome its similar to
+const day = prompt("What day is it?");
+
+switch (day) {
+  // basically asking for day === monday or day === tuesday or day === wednesday
+  case "monday":
+    console.log("Go to store");
+    console.log("Go to gym");
+    break;
+  case "tuesday":
+    console.log("Go to Work");
+    console.log("Go to musuem");
+    break;
+  case "wednesday":
+    console.log("Go to park");
 }
