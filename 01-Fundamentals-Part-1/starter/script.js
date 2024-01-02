@@ -535,5 +535,15 @@ switch (day) {
     console.log("Go to musuem");
     break;
   case "wednesday":
-    console.log("Go to park");
+  case "thursday": 
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("recorrd videos")
+    break;
+  case "saturday": 
+  case "sunday":
+  console.log("Enjoy weekend")
+    break;
+  default: console.log("Not a valid day")
 }
