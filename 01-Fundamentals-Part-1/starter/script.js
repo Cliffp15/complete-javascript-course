@@ -563,9 +563,8 @@ if(age>= 18){
 }
 console.log(drink2);
 //------- Coding Challenge Four -------//
-const bill = 375;
-
-let tip = bill >= 50 && bill <=300  ? tip = bill*.15 : tip = bill * 0.20
+const bill = 275;
+const tip = bill >= 50 && bill <=300  ? bill*0.15 : bill * 0.20
 
 const total = bill + tip
 console.log(total)
