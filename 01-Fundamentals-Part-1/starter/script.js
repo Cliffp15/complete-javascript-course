@@ -522,28 +522,50 @@ TEST DATA: Dolphins scored 96, 108, and 89. Koalas scored 88, 91, and 110.
 // ------- Switch Statement -------//
 
 //Used to compare a variable to multiple outcome and select the outcome its similar to
-const day = prompt("What day is it?");
+// const day = prompt("What day is it?");
 
-switch (day) {
-  // basically asking for day === monday or day === tuesday or day === wednesday
-  case "monday":
-    console.log("Go to store");
-    console.log("Go to gym");
-    break;
-  case "tuesday":
-    console.log("Go to Work");
-    console.log("Go to musuem");
-    break;
-  case "wednesday":
-  case "thursday": 
-    console.log("Write code examples");
-    break;
-  case "friday":
-    console.log("recorrd videos")
-    break;
-  case "saturday": 
-  case "sunday":
-  console.log("Enjoy weekend")
-    break;
-  default: console.log("Not a valid day")
+// switch (day) {
+//   // basically asking for day === monday or day === tuesday or day === wednesday
+//   case "monday":
+//     console.log("Go to store");
+//     console.log("Go to gym");
+//     break;
+//   case "tuesday":
+//     console.log("Go to Work");
+//     console.log("Go to musuem");
+//     break;
+//   case "wednesday":
+//   case "thursday": 
+//     console.log("Write code examples");
+//     break;
+//   case "friday":
+//     console.log("recorrd videos")
+//     break;
+//   case "saturday": 
+//   case "sunday":
+//   console.log("Enjoy weekend")
+//     break;
+//   default: console.log("Not a valid day")
+// }
+
+//------- Conditional Ternary Operator ------- //
+
+const age = 23;
+const drink= age >= 18 ? 'wine🍷' : 'water💧';
+console.log(drink);
+
+
+let drink2;
+if(age>= 18){
+  drink2 = 'wine 🍷';
+} else {
+  drink2 = 'water 💧'
 }
+console.log(drink2);
+//------- Coding Challenge Four -------//
+const bill = 375;
+
+let tip = bill >= 50 && bill <=300  ? tip = bill*.15 : tip = bill * 0.20
+
+const total = bill + tip
+console.log(total)
