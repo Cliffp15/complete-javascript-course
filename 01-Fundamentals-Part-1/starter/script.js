@@ -554,7 +554,6 @@ const age = 23;
 const drink= age >= 18 ? 'wine🍷' : 'water💧';
 console.log(drink);
 
-
 let drink2;
 if(age>= 18){
   drink2 = 'wine 🍷';
@@ -562,9 +561,11 @@ if(age>= 18){
   drink2 = 'water 💧'
 }
 console.log(drink2);
+
 //------- Coding Challenge Four -------//
+
 const bill = 275;
 const tip = bill >= 50 && bill <=300  ? bill*0.15 : bill * 0.20
 
 const total = bill + tip
-console.log(total)
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
