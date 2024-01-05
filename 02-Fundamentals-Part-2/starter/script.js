@@ -46,3 +46,24 @@ console.log(fruitProcessor(9, 5));// Produces same result just not stored in var
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
+
+
+//Function Declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+
+const age1 = calcAge1(1991);
+console.log(age1);
+
+
+//Function Expression
+//functions without a name are called "anonymous functions"
+//They can be store into varaibles since they return values
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const age2 = calcAge2(1994);
+
+console.log(age1, age2)
