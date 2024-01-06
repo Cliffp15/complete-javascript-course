@@ -93,3 +93,28 @@ const yearsUntilRetirement2 = (birthYear, firstName) => {
 }
 
 console.log(yearsUntilRetirement2(1991, 'cliff'));
+
+// ------- functions Calling functions -------//
+
+// Lets create functions that "slices fruit pieces in fours"
+
+//Declaration style
+function cutPieces (fruit){
+    return fruit *4
+}
+console.log(cutPieces(5))
+
+//expression style
+const cutPiece = function (fruit) {
+    return fruit *4;
+}
+console.log(cutPiece(5))
+
+const fruitprocessor  = function (apples, oranges){
+    const applePieces = cutPieces(apples)
+    const orangePieces = cutPieces(oranges)
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`
+    return juice;
+}
+
+console.log(fruitprocessor(2, 3))
